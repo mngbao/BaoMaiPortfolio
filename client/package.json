@@ -1,0 +1,14 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "This is website that show BaoMai's Profolio",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "author": "Bao Mai",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
