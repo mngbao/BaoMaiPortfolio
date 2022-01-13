@@ -9,6 +9,11 @@
   "author": "Bao Mai",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^7.0.1"
-  }
+    "node-sass": "^7.0.1",
+    "sass": "^1.47.0"
+  },
+  "devDependencies": {
+    "prettier": "2.5.1"
+  },
+  "keywords": []
 }

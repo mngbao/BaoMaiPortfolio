@@ -1,0 +1,23 @@
+/** @format */
+
+// CSS HOMEPAGE
+body {
+  background-color: $black-cl;
+  color: $white-cl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.intro {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .first {
+  }
+  .second,
+  .third {
+    display: none;
+  }
+}
