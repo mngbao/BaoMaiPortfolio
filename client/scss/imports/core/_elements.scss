@@ -13,7 +13,9 @@ h2 {
 h3 {
   font-size: 2rem;
 }
-
+a {
+  text-decoration: none;
+}
 .project {
   padding-top: 150px;
   &__card {
@@ -37,6 +39,7 @@ h3 {
       width: 100%;
       margin-top: 50px;
       text-align: left;
+      direction: ltr;
       p {
         padding-top: 10px;
         width: 100%;
@@ -50,4 +53,34 @@ h3 {
 }
 .project:last-child {
   padding-bottom: 150px;
+}
+
+.button {
+  border: white 2px solid;
+  display: flex;
+
+  justify-content: center;
+  width: 150px;
+  padding: 5px 0px;
+  text-align: left;
+  margin-top: 20px;
+  color: white;
+
+  span {
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  i {
+    margin-left: 8px;
+    img {
+      width: 30px;
+    }
+  }
+  &:hover {
+    background-color: $yellow-cl;
+    border: $yellow-cl 2px solid;
+    i {
+      transform: translateX(8px);
+    }
+  }
 }

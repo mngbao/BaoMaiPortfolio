@@ -127,7 +127,11 @@ table {
 *::after {
   box-sizing: inherit; }
 
-/*primary colors*/
+/**
+ * /*primary colors
+ *
+ * @format
+ */
 /*global text color*/
 /*global bg color*/
 /*font families*/
@@ -242,6 +246,9 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+a {
+  text-decoration: none; }
+
 .project {
   padding-top: 150px; }
   .project__card {
@@ -262,7 +269,8 @@ h3 {
     .project__card .text {
       width: 100%;
       margin-top: 50px;
-      text-align: left; }
+      text-align: left;
+      direction: ltr; }
       .project__card .text p {
         padding-top: 10px;
         width: 100%; }
@@ -272,6 +280,28 @@ h3 {
 
 .project:last-child {
   padding-bottom: 150px; }
+
+.button {
+  border: white 2px solid;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  padding: 5px 0px;
+  text-align: left;
+  margin-top: 20px;
+  color: white; }
+  .button span {
+    font-size: 1.2rem;
+    text-decoration: none; }
+  .button i {
+    margin-left: 8px; }
+    .button i img {
+      width: 30px; }
+  .button:hover {
+    background-color: #fec260;
+    border: #fec260 2px solid; }
+    .button:hover i {
+      transform: translateX(8px); }
 
 .col-1,
 .col-2,
