@@ -7,10 +7,10 @@ header {
   top: 0;
   overflow: hidden;
   left: 0;
-  position: fixed;
+
   opacity: 1;
-  z-index: 200;
-  background-color: $black-cl;
+  z-index: 10;
+  background-color: $background;
   .container-fluid {
     height: 100%;
     display: flex;
@@ -18,21 +18,22 @@ header {
     justify-content: space-between;
     position: relative;
     .hamburger {
-      display: inline-flex;
+      display: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       height: 100%;
       width: 60px;
-
+      animation: slideRight 1s ease-in-out;
+      z-index: 100;
       .bar1,
       .bar2,
       .bar3 {
         width: 35px;
         height: 5px;
         border-radius: 3px;
-        background-color: white;
+        background-color: $main;
         margin: 3px 0px;
         transition: 0.4s;
       }
@@ -64,44 +65,111 @@ header {
       text-shadow: whitesmoke;
       letter-spacing: 1px;
       font-weight: 900;
+      animation: slideLeft 1s ease-in-out;
     }
   }
 }
 
-@keyframes opacity {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
+//nav
+.menu {
+  height: 100%;
+  color: $main;
+  animation: slideRight 1s ease-in-out;
+  ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      padding: 20px 15px;
+      cursor: pointer;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
-@keyframes change {
-  0%,
-  12.66%,
-  100% {
-    transform: translate3d(0, 0, 0);
+nav {
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  width: 50%;
+  transform: translateX(-100em);
+  transition: transform 1s ease-in-out;
+  ul {
+    background-color: $secondary;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5em;
+    li {
+      width: 100%;
+      padding: 5px 0;
+      a {
+        color: $main;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+      &:hover {
+        background-color: $tertiary;
+      }
+    }
   }
-  16.66%,
-  29.32% {
-    transform: translate3d(0, -25%, 0);
+}
+
+.open-nav {
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+@include sm {
+  header {
+    .container-fluid {
+      .hamburger {
+        display: inline-flex;
+      }
+    }
   }
-  33.32%,
-  45.98% {
-    transform: translate3d(0, -50%, 0);
+  .menu {
+    display: none;
   }
-  49.98%,
-  62.64% {
-    transform: translate3d(0, -75%, 0);
+  // nav {
+  //   background-color: initial;
+  //   color: $button;
+  //   animation: unset;
+
+  //   ul {
+  //     position: absolute;
+  //     height: 100vh;
+  //     width: 10em;
+  //     display: block;
+  //     z-index: 20;
+  //     li {
+  //     }
+  //   }
+  // }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-250px);
   }
-  66.64%,
-  79.3% {
-    transform: translate3d(0, -50%, 0);
+  to {
+    transform: translateX(0px);
   }
-  83.3%,
-  95.96% {
-    transform: translate3d(0, -25%, 0);
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(250px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }
