@@ -280,8 +280,6 @@ a {
       margin-top: 50px;
       text-align: left;
       direction: ltr; }
-      .project__card .text .title {
-        transform: translateX(-0.8em); }
       .project__card .text p {
         padding-top: 10px;
         width: 100%; }
@@ -330,23 +328,29 @@ a {
       text-indent: -30px; }
 
 @media screen and (max-width: 991px) {
-  .project__card .image {
-    cursor: pointer; }
-    .project__card .image:hover + .text .title {
-      opacity: 1;
-      transform: translateX(0em);
-      transition: transform 0.5s ease-in-out; }
-  .project__card .text .title {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    font-size: 3rem;
-    top: 25%;
-    mix-blend-mode: difference; }
-  .project__card .text .button {
-    display: none; }
-  .project__card .text .content {
-    display: none; }
+  .project {
+    padding-top: 6em; }
+    .project__card .image {
+      cursor: pointer; }
+      .project__card .image:hover + .text .title {
+        z-index: 5;
+        opacity: 1;
+        transform: translateX(0em);
+        transition: transform 0.5s ease-in-out; }
+    .project__card .text .title {
+      z-index: -1;
+      transform: translateX(-0.8em);
+      user-select: none;
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      font-size: 3rem;
+      top: 25%;
+      mix-blend-mode: difference; }
+    .project__card .text .button {
+      display: none; }
+    .project__card .text .content {
+      display: none; }
 
   .--right .project__card .text .title {
     left: 15%; } }
