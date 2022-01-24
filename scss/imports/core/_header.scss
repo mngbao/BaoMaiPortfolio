@@ -27,6 +27,7 @@ header {
       width: 60px;
       animation: slideRight 1s ease-in-out;
       z-index: 100;
+
       .bar1,
       .bar2,
       .bar3 {
@@ -39,18 +40,18 @@ header {
       }
 
       /* Rotate first bar */
-      .change .bar1 {
+      .change1 {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(-9px, 6px);
       }
 
       /* Fade out the second bar */
-      .change .bar2 {
+      .change2 {
         opacity: 0;
       }
 
       /* Rotate last bar */
-      .change .bar3 {
+      .change3 {
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
       }
@@ -98,7 +99,7 @@ nav {
   z-index: 99;
   height: 100vh;
   width: 50%;
-  transform: translateX(-100em);
+  transform: translateX(-40em);
   transition: transform 1s ease-in-out;
   ul {
     background-color: $secondary;
@@ -126,7 +127,7 @@ nav {
 
 .open-nav {
   transform: translateX(0);
-  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-out;
 }
 @include sm {
   header {
