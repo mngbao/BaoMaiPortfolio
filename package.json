@@ -13,6 +13,7 @@
     "sass": "^1.47.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "prettier": "2.5.1"
   },
   "keywords": []
