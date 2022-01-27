@@ -138,6 +138,7 @@ table {
 /*headings typo*/
 /*BOXED LAYOUT*/
 /*GRID - media queries breakpoints*/
+/** @format */
 @-ms-viewport {
   width: device-width; }
 * {
@@ -162,7 +163,8 @@ body {
   text-transform: none;
   background: #eeeeee;
   scroll-behavior: smooth;
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     width: 5px; }
@@ -2313,6 +2315,13 @@ header {
       /* Rotate first bar */
       /* Fade out the second bar */
       /* Rotate last bar */ }
+      header .container-fluid .hamburger:not(.change):hover span:nth-child(1) {
+        transform: rotateZ(10deg); }
+      header .container-fluid .hamburger:not(.change):hover span:nth-child(2) {
+        transform: rotateY(60deg);
+        transform: translateX(-0.2em); }
+      header .container-fluid .hamburger:not(.change):hover span:nth-child(3) {
+        transform: rotateZ(7deg); }
       header .container-fluid .hamburger .bar1,
       header .container-fluid .hamburger .bar2,
       header .container-fluid .hamburger .bar3 {
@@ -2440,18 +2449,36 @@ body {
     display: flex;
     height: 100%;
     justify-content: center;
-    align-items: center;
-    overflow: hidden; }
+    align-items: left;
+    overflow: hidden;
+    flex-direction: column; }
     .intro .container .animation {
-      z-index: 2; }
-      .intro .container .animation__first {
-        color: #e53170; }
+      z-index: 2;
+      line-height: 4em; }
+      .intro .container .animation .space {
+        padding-right: 0.3em; }
+      .intro .container .animation span {
+        font-size: 3.5rem;
+        font-weight: 500;
+        transition: 0.4s;
+        user-select: none; }
+        .intro .container .animation span:hover {
+          animation: jumping 1s ease-in-out; }
 
+.jumping {
+  animation: jumping 1s ease-out; }
+
+@keyframes jumping {
+  from {
+    transform: translateY(-30px);
+    color: #e53170; }
+  to {
+    transform: translateY(70px);
+    color: #ff8906; } }
 .projects {
   height: 100%;
   width: 100%; }
   .projects .container {
-    height: 500px;
     display: flex;
     flex-direction: column;
     height: 100%; }

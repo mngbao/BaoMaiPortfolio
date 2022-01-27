@@ -27,6 +27,18 @@ header {
       width: 60px;
       animation: slideRight 1s ease-in-out;
       z-index: 100;
+      &:not(.change):hover {
+        span:nth-child(1) {
+          transform: rotateZ(10deg);
+        }
+        span:nth-child(2) {
+          transform: rotateY(60deg);
+          transform: translateX(-0.2em);
+        }
+        span:nth-child(3) {
+          transform: rotateZ(7deg);
+        }
+      }
 
       .bar1,
       .bar2,
@@ -56,6 +68,7 @@ header {
         transform: rotate(45deg) translate(-8px, -8px);
       }
     }
+
     .info {
       text-align: center;
       height: 80%;
@@ -140,21 +153,6 @@ nav {
   .menu {
     display: none;
   }
-  // nav {
-  //   background-color: initial;
-  //   color: $button;
-  //   animation: unset;
-
-  //   ul {
-  //     position: absolute;
-  //     height: 100vh;
-  //     width: 10em;
-  //     display: block;
-  //     z-index: 20;
-  //     li {
-  //     }
-  //   }
-  // }
 }
 
 @keyframes slideRight {
