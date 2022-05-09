@@ -4,14 +4,14 @@
  * @format
  */
 
-$white-cl: #eeeeee;
-$black-cl: #151515;
-$yellow-cl: #fec260;
-$green-cl: #77d970;
-
-$text-cl: #a7a9be;
+$white-cl: #efefef;
+$black-cl: #020202;
+$yellow-cl: #ffc947; //MAIN KEEP
+$yellow2-cl: #ffdd8c;
+$main-cl: #0a1931; //MAIN KEEP
+$second-cl: #0f284f;
 /*global text color*/
-$background: #0f0e17;
+$background: #1f1f38;
 $headline: #fffffe;
 $paragraph: #a7a9be;
 $button: #ff8906;
@@ -40,7 +40,7 @@ $lh-text-m: normal;
 
 /*BOXED LAYOUT*/
 $container-max-width: 1920px;
-$container-width: 1010px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
+$container-width: 1200px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH

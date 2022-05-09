@@ -18,7 +18,7 @@ body {
   width: 100%;
   max-width: $container-max-width;
   margin: auto;
-  @include text($fz-text, $font-main, $lh-text, $text-cl, none);
+  @include text($fz-text, $font-main, $lh-text, $white-cl, none);
   background: $white-cl;
   scroll-behavior: smooth;
   position: relative;

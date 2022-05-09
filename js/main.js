@@ -30,8 +30,44 @@ jQuery(document).ready(function () {
       // element.classList.remove("remove")
     })
   })
+
+
 })
 
+// const form = document.querySelector('.contact-form');
+
+// function sendEmail(e) {
+//   e.preventDefault();
 
 
+//   Email.send({
+//     Host: "smtp.elasticemail.com",
+//     Username: "maigiabao69@gmail.com",
+//     Password: "07973B992224A862D6EE50A04EAC0FA33EA6",
+//     To: 'maingocgiabao@gmail.com',
+//     From: "abc@test.com",
+//     Subject: "This is the subject",
+//     Body: "And this is the body"
+//   }).then(
+//     message => alert(message)
+//   );
 
+//   // 678DA0B8FE681A4053EB63092D8000502958
+// // }
+
+// // form.addEventListener("submit", sendEmail);
+
+
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.elasticemail.com",
+//     Username: "maigiabao69@gmail.com",
+//     Password: "07973B992224A862D6EE50A04EAC0FA33EA6",
+//     To: 'maingocgiabao@gmail.com',
+//     From: "sender@example.com",
+//     Subject: "Test email",
+//     Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+//   }).then(
+//     message => alert(message)
+//   );
+// }

@@ -2,63 +2,177 @@
 
 // CSS HOMEPAGE
 body {
-  background-color: $background;
   color: $headline;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .intro {
   height: 100vh;
   width: 100%;
-  overflow: hidden;
   position: relative;
+  background: url("../../img/intro-bg1.svg") no-repeat right top;
+  background-color: #f5e6ce;
+  background-size: 100% 100%;
+
   .container {
     display: flex;
     height: 100%;
-    justify-content: center;
-    align-items: left;
+    justify-content: space-around;
+    align-items: center;
     overflow: hidden;
-    flex-direction: column;
-    .animation {
-      z-index: 2;
-      line-height: 4em;
-      .space {
-        padding-right: 0.3em;
+    .text {
+      h1 {
+        font-family: mr;
+        font-size: 4rem;
+        font-weight: 700;
+        // color: #8adceb;
+        color: #1c4991;
       }
-      span {
-        font-size: 3.5rem;
-        font-weight: 500;
-        transition: 0.4s;
-        user-select: none;
+      h2 {
+        font-family: mr;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1c4991;
+        word-wrap: break-word;
+      }
+      div {
+        margin-top: 2em;
+        .button {
+          border: $main-cl 0.2em solid;
+          font-size: 0.8rem;
+          color: white;
+          padding: 1.25em 3.5em;
+          font-size: 0.7em;
+          font-weight: 900;
+          margin-right: 1em;
+          background-color: $main-cl;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          &:hover {
+            color: $yellow-cl;
+          }
+        }
+        .--secondary {
+          background-color: #f5e6ce;
+          border: $main-cl 0.2em solid;
+          color: $main-cl;
+        }
+      }
+    }
+    .image {
+      height: 29em;
+      width: 20em;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 20%;
+      }
+    }
+  }
+}
 
-        &:hover {
-          animation: jumping 1s ease-in-out;
+.projects {
+  background-color: #f5e6ce;
+
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .container {
+    .project {
+      .project__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        margin: 100px 0;
+        z-index: 2;
+        .text {
+          max-height: 300px;
+          position: relative;
+          z-index: 5;
+          padding-left: 2em;
+          width: 100%;
+          .title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            transform: translateX(5%);
+          }
+          .desc {
+            transform: translateX(5%);
+          }
+          .interact {
+            transform: translateX(5%);
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            .button {
+              background: $yellow-cl;
+              padding: 0.5em 1em;
+              color: white;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              border-radius: 10px;
+              text-align: center;
+              font-size: 0.8rem;
+            }
+            .disabled {
+              background: #fff;
+              color: #ccc;
+              cursor: no-drop;
+            }
+            span {
+              background-color: $paragraph;
+              border-radius: 10px;
+              padding: 1px 10px;
+              font-size: 0.6em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              font-family: mt;
+              &:nth-of-type(1) {
+                background-color: transparent;
+                width: min(1vw, 1rem);
+              }
+            }
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 125%;
+            height: 150%;
+            z-index: -1;
+            background-color: rgba($color: #c4c4c4, $alpha: 0.5);
+          }
+        }
+        .image {
+          height: 250px;
+          width: 450px;
+          margin-left: 10%;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
   }
 }
 
-.jumping {
-  animation: jumping 1s ease-out;
-}
+.contact {
+  background-color: #f5e6ce;
 
-@keyframes jumping {
-  from {
-    transform: translateY(-30px);
-    color: $tertiary;
-  }
-  to {
-    transform: translateY(70px);
-    color: $button;
-  }
-}
-
-.projects {
-  height: 100%;
-  width: 100%;
   .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    padding: 0 min(15em, 14vw);
+    form {
+      height: 100%;
+      div {
+        margin-top: 1.5em;
+      }
+    }
   }
 }
