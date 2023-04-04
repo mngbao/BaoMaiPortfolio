@@ -243,44 +243,8 @@ body {
     pointer-events: auto; }
 
 /** @format */
-.triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0; }
-
-.triangle svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 57px; }
-
-.triangle .shape-fill {
-  fill: #0a1931; }
-
-h1 {
-  font-size: 3.5rem;
-  margin: 0.3em 0 0;
-  font-family: "es"; }
-
 .yellow {
   color: #ffc947; }
-
-.glitch {
-  text-shadow: -0.1rem -0.1rem 0 cyan, 0.1rem 0.1rem 0 magenta;
-  font-family: "es"; }
-
-h2 {
-  font-family: "es";
-  text-align: center;
-  font-size: 2.5rem; }
-
-h3 {
-  font-size: 4.5rem;
-  font-family: "cg";
-  text-transform: uppercase; }
 
 a {
   text-decoration: none; }
@@ -288,7 +252,8 @@ a {
 .sectionTitle {
   font-family: "es";
   text-transform: uppercase;
-  letter-spacing: 0.2em; }
+  letter-spacing: 0.2em;
+  text-align: center; }
 
 .button {
   cursor: pointer;
@@ -2400,9 +2365,12 @@ nav {
 footer {
   width: 100%;
   height: 50px;
-  display: none; }
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
   footer .container-fluid {
-    background-color: #f25f4c;
+    background-color: transparent;
     height: 100%;
     display: flex;
     justify-content: space-between; }
@@ -2516,7 +2484,7 @@ body {
           cursor: no-drop; }
         .projects .container .project .project__card .text .interact span {
           background-color: #a7a9be;
-          border-radius: 10px;
+          border-radius: 5px;
           padding: 1px 10px;
           font-size: 0.6em;
           display: flex;
@@ -2554,5 +2522,13 @@ body {
       height: 100%; }
       .contact .container form div {
         margin-top: 1.5em; }
+
+@media screen and (max-width: 1200px) {
+  .intro .container .text h1 {
+    font-size: 3.5rem; }
+  .intro .container .text h2 {
+    font-size: 2.75rem; } }
+.project .project__card .text {
+  width: 120%; }
 
 /*# sourceMappingURL=style.css.map */

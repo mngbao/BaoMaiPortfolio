@@ -8,168 +8,142 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="dist/font.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
 
-    <link rel="stylesheet" href="dist/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-</script>
+    <link rel="stylesheet" href="scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
       <div class="container-fluid">
+      
         <div class="logo">
+          <span class="pagination">Hello</span>
           <img src="./img/logo.png" alt="logo" />
         </div>
-        <div class="menu">
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <span></span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#work">Projects</a></li>
+      </ul>
+    </nav>
+    <main class="mainwrapper">
+      <section id="hello" class="slide hero">
+        <div class="container ">
+            <div class="hero_text">
+              <div class="hero_text-spinner xinchao-animate">
+                <span class="hello">Hello</span>
+                <span class="xinchao">Xin Chao</span>
+              </div>
+            </div>
+            <div class="hero_text">my name</div>
+            <div class="hero_text">is Tony</div>
+            </div>
+          
+          <!-- <div class="image">
+            <object data="img/character.svg" type=""></object>
+          </div> -->
+        </div>
+      </section>
+    
+      <section id="work" class="slide work">
+        <div class="container --grid-12">
+          <div class="work_detail --item1">
+           
+            <div class="work_detail-image myfade">
+              <a href="https://maingocgiabao.cloud">
+                <img id="lakehood" src="/img/work/lakehood.png" alt="">
+              </a>
+
+            </div>
+            <div class="work_detail-info myfade">
+              <h2>LAKEHOOD RENTAL E-COMMERCER WEBSITE</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur sunt deserunt voluptatem? Quae, nam magnam. Quibusdam neque rerum voluptas!</p>
+              
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="work" class="slide work secondbg">
+        <div class="container --grid-12">
+          <div class="work_detail --item2">
+           
+            <div class="work_detail-image myfade">
+              <a href="">
+                <img id="styled" src="/img/work/style.png" alt="">
+              </a>
+
+            </div>
+            <div class="work_detail-info myfade">
+              <h2>STYLE E-COMMERCE SHOP</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur sunt deserunt voluptatem? Quae, nam magnam. Quibusdam neque rerum voluptas!</p>
+              
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="work" class="slide work resume">
+        <div class="container --grid-12">
+          <div class="work_detail --item3">
+           
+            <div class="work_detail-image myfade">
+              <a href="">
+                <img id="wooder"src="/img/work/wooder.png" alt="">
+              </a>
+
+            </div>
+            <div class="work_detail-info myfade">
+              <h2>WOODER LANDING PAGE</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur sunt deserunt voluptatem? Quae, nam magnam. Quibusdam neque rerum voluptas!</p>
+              
+            </div>
+          </div>
+
+        </div>
+      </section>
+     
+
+      <section id="contact" class="slide contact">
+        <div>
+          <h3>Let's Talk</h3>
           <ul>
-            <li class=" "><a href="#about">About</a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#project">Projects</a></li>
+            <li><a href="https://www.linkedin.com/in/bao-mai-25a4aa186/"><img src="/img/linkedin.png" alt=""></a></li>
+            <li><a href="https://github.com/mngbao"><img src="/img/github.png" alt=""></a></li>
+            <li><a href="mangocgiabao@gmail.com"><img src="/img/Gmail-logo-500x281.png" alt=""></a></li>
           </ul>
         </div>
-         <div class="hamburger">
-          <span class="bar1"></span>
-          <span class="bar2"></span>
-          <span class="bar3"></span>
-        </div>
-      </div>
-      <nav class="">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="mainwrapper">
-      <section class="intro">
-        <div class="container">
-          <div class="text">
-            <h1>Hi, I'm Bao Mai</h1>
-            <h2>I'm a <span class="yellow">Front-end Developer</span></h2>
-            <div>
-              <a href="#projects" class="button">My Projects</a>
-              <a href="#contact" class="button --secondary">Contact me</a>
-
-            </div>
-          </div>
-          <div class="image">
-            <object data="img/character.svg" type=""></object>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects">
-        <div class="container">
-          <h2 class="sectionTitle">Project</h2>
-          <div class="project">
-            <div class="project__card">
-              <div class="text">
-                <h3 class="title">Wooder Landing Page</h3>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque libero maxime id odio rerum modi similique sapiente autem ex.</p>
-                <div class="interact">
-                  
-                  <a href="https://mngbao.github.io/Wooder-Landing-Page/"class="button">View Project</a>
-                  <a href="https://github.com/mngbao/Wooder-Landing-Page"
-                  class="button">Github</a>
-                  <span></span>
-                  
-                  <span>HTML</span>
-                  <span>SASS</span>
-                  <span>JAVASCRIPT</span>
-                </div>
-              </div>
-              <div class="image">
-                <img src="img/wooder.jpg" alt="Wooder" />
-              </div>
-            </div>
-            <div class="project__card">
-              <div class="text">
-                <h3 class="title">Socket Chat App</h3>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque libero maxime id odio rerum modi similique sapiente autem ex.</p>
-                <div class="interact">
-                  <a href=""class="button disabled">View Project</a>
-                  <a href="https://github.com/mngbao/LiveChatApp"
-                  class="button">Github</a>
-                  <span></span>
-                  <span>NODEJS</span>
-                  <span>EXPRESS</span>
-                  <span>SOCKET</span>
-                </div>
-              </div>
-              <div class="image">
-                <img src="img/chatApp.jpg" alt="Wooder" />
-              </div>
-            </div>
-            <div class="project__card">
-              <div class="text">
-                <h3 class="title">UNI Nails Website</h3>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque libero maxime id odio rerum modi similique sapiente autem ex.</p>
-                <div class="interact">
-                  
-                  <a href="https://mngbao.github.io/UNI_Nails/"class="button">View Project</a>
-                  <a href="https://github.com/mngbao/UNI_Nails"
-                  class="button">Github</a>
-                  <span></span>
-                  
-                  <span>HTML</span>
-                  <span>SASS</span>
-                  <span>JAVASCRIPT</span>
-                </div>
-              </div>
-              <div class="image">
-                <img src="img/uni.jpg" alt="Wooder" />
-              </div>
-            </div>
-          </div>
-      
-        </div>
-      </section>
-      <section class="contact">
-        <div class="container ">
-          <h2 class="sectionTitle">Contact Me!</h2>
-          <form class="row g-3 contact-form" method="POST" action="https://baomaiportfolio.herokuapp.com">
-            <div class="col-md-6">
-              <label for="firstName" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" required/>            
-            </div>
-            <div class="col-md-6">
-              <label for="lastName" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" required/>            
-            </div> 
-            <div class="col-md-8">
-              <label for="emailInfo" class="form-label">Email</label>
-              <input ; type="text" class="form-control" id="emailInfo" name="email" required/>           
-            </div>
-            <div class="col-md-4">
-              <label for="phoneNumber" class="form-label">Phone Number (optional)</label>
-              <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="+1(234) 567-8910"/>            
-            </div>
-            <div class="col-md-12">
-              <label for="comments" class="form-labeL">Message</label>
-              <textarea class="form-control" id="comments" cols="30" rows="3" name="comments"></textarea>
-            </div>
-            <div class="col-md-12">
-              <button type="submit" class="btn btn-primary">Send</button>
-            </div>
-          </form> 
-        </div>
+          
       </section>
     </main>
-    <footer>
-      <div class="container-fluid">
-        <div class="hidden"></div>
-        <div class="logo"></div>
-        <div class="toTop">
-          <span>to Top</span>
-        </div>
-      </div>
-    </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="js/main.js"></script>
+    <footer></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/main.js"></script>
   </body>
-
 </html>

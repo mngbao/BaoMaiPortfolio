@@ -36,6 +36,8 @@ $lh-text: normal;
 $fz-text-m: 16px;
 $lh-text-m: normal;
 
+
+
 //============================================================//
 
 /*BOXED LAYOUT*/
@@ -54,3 +56,26 @@ $xs-max: ($xs-min - 1); // Mobile
 $sm-max: ($sm-min - 1); // Tablet
 $md-max: ($md-min - 1); // Desktop
 $lg-max: ($lg-min - 1); // Large Desktop
+
+// Define font sizes for each breakpoint
+$fz-text-xs: 14px;
+$fz-text-sm: 16px;
+$fz-text-md: 18px;
+$fz-text-lg: 20px;
+
+// Set the font size for the body element using media queries
+body {
+  font-size: $fz-text-xs;
+
+  @media (min-width: $sm-min) {
+    font-size: $fz-text-sm;
+  }
+
+  @media (min-width: $md-min) {
+    font-size: $fz-text-md;
+  }
+
+  @media (min-width: $lg-min) {
+    font-size: $fz-text-lg;
+  }
+}

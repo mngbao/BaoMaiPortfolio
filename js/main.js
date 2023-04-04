@@ -1,73 +1,157 @@
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-jQuery(document).ready(function () {
+const lakehood = document.getElementById("lakehood");
+lakehood.addEventListener("mouseover", () => {
+  lakehood.style.transform = "translateY(-80%)";
+  lakehood.style.transition = "transform 8s ease-in-out 0s";
+});
+lakehood.addEventListener("mouseout", () => {
+  lakehood.style.transform = "initial";
+  lakehood.style.transition = "initial";
+});
 
-  //interactive 3dtext 
-  $('.3d').mousemove(function (e) {
-    var rXP = (e.pageX - this.offsetLeft - $(this).width() / 2);
-    var rYP = (e.pageY - this.offsetTop - $(this).height() / 2);
-    $('.3d').css('text-shadow', +rYP / -10 + 'px ' + rXP / 80 + 'px rgba(0,255,255,.8), ' + rYP / 18 + 'px ' + rXP / 60 + 'px rgba(255,0,255,1), ' + rXP / 70 + 'px ' + rYP / 12 + 'px rgba(255,0,255,.7)');
+const styled = document.getElementById("styled");
+styled.addEventListener("mouseover", () => {
+  styled.style.transform = "translateY(-24%)";
+  styled.style.transition = "transform 2s ease-in-out 0s";
+});
+styled.addEventListener("mouseout", () => {
+  styled.style.transform = "translateY(0%)";
+  styled.style.transition = "transform 2s ease-in-out 0s";
+});
+
+const wooder = document.getElementById("wooder");
+wooder.addEventListener("mouseover", () => {
+  wooder.style.transform = "translateY(-82%)";
+  wooder.style.transition = "transform 8s ease-in-out 0s";
+});
+wooder.addEventListener("mouseout", () => {
+  wooder.style.transform = "translateY(0%)";
+  wooder.style.transition = "transform 8s ease-in-out 0s";
+});
+
+jQuery(document).ready(function () {
+  //hamburger click///
+  const menu = document.querySelector(".hamburger-menu");
+  const nav = document.querySelector("nav");
+  const pagination = document.querySelector(".pagination");
+  const sections = document.querySelectorAll("section");
+  const bars = document.querySelectorAll(".bar");
+  const spinner = document.querySelector(".hero_text-spinner");
+
+  let isHello = true;
+
+  setInterval(() => {
+    if (isHello) {
+      spinner.classList.add("hello-animate");
+      spinner.classList.remove("xinchao-animate");
+    } else {
+      spinner.classList.remove("hello-animate");
+      spinner.classList.add("xinchao-animate");
+    }
+    isHello = !isHello;
+  }, 4000);
+
+  menu.addEventListener("click", () => {
+    menu.classList.toggle("open");
+    nav.classList.toggle("open-nav");
+    pagination.classList.toggle("hidden");
   });
 
-  //hamburger click///
-  let hamburger = $('.hamburger')
-  hamburger.click(function () {
-    $('nav').toggleClass("open-nav");
-    hamburger.toggleClass("change")
-    $('.hamburger .bar1').toggleClass("change1");
-    $('.hamburger .bar2').toggleClass("change2");
-    $('.hamburger .bar3').toggleClass("change3");
-  })
+  //Fadein Scroll
+  $(document).on("scroll", function () {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
 
-  //hover I'm Bao Mai
-  let letters = document.querySelectorAll('.animation span')
-  letters.forEach(function (element, number) {
-    element.addEventListener("mouseover", function (event) {
-      // element.classList.add("jumping");
-      // console.log(element)
-      // sleep(1000);
-      // element.classList.remove("remove")
-    })
-  })
+    var fades = $(".myfade");
+    for (var i = 0; i < fades.length; i++) {
+      var fade = fades[i];
 
+      if ($(fade).position().top < pageBottom) {
+        $(fade).addClass("myvisible");
+      }
+    }
+  });
 
-})
+  //work scrollthrough whole page
 
-// const form = document.querySelector('.contact-form');
+  //scroll to section
+  // Get all sections
 
-// function sendEmail(e) {
-//   e.preventDefault();
+  // Update active section on scroll
+  window.addEventListener("scroll", () => {
+    // Get current scroll position
+    const currentScroll = window.pageYOffset;
 
+    // Find section that matches current scroll position
+    let activeSection;
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
 
-//   Email.send({
-//     Host: "smtp.elasticemail.com",
-//     Username: "maigiabao69@gmail.com",
-//     Password: "07973B992224A862D6EE50A04EAC0FA33EA6",
-//     To: 'maingocgiabao@gmail.com',
-//     From: "abc@test.com",
-//     Subject: "This is the subject",
-//     Body: "And this is the body"
-//   }).then(
-//     message => alert(message)
-//   );
+      if (
+        currentScroll >= sectionTop &&
+        currentScroll < sectionTop + sectionHeight
+      ) {
+        activeSection = section;
+      }
+    });
+    console.log(activeSection.id);
+    switch (activeSection.id) {
+      case "hello":
+        pagination.innerHTML = "Hello";
+        break;
+      case "work":
+        pagination.innerHTML = "My Works";
+        pagination.style.color = "white";
+        bars.forEach((bar) => {
+          bar.style.backgroundColor = "white";
+        });
+        break;
+      case "contact":
+        pagination.innerHTML = "Contact";
+        pagination.style.color = "black";
+        bars.forEach((bar) => {
+          bar.style.backgroundColor = "black";
+        });
+        break;
+      default:
+        pagination.innerHTML = "Hello";
+        break;
+    }
+  });
 
-//   // 678DA0B8FE681A4053EB63092D8000502958
-// // }
+  // function smoothScrollBy(distance, duration) {
+  //   var initialY = window.scrollY,
+  //     y = initialY + distance,
+  //     baseY = (initialY + y) * 0.5,
+  //     difference = initialY - baseY,
+  //     startTime = performance.now();
 
-// // form.addEventListener("submit", sendEmail);
+  //   function step() {
+  //     var normalizedTime = (performance.now() - startTime) / duration;
+  //     if (normalizedTime > 1) normalizedTime = 1;
 
+  //     window.scrollTo(
+  //       0,
+  //       baseY + difference * Math.cos(normalizedTime * Math.PI)
+  //     );
+  //     if (normalizedTime < 1) window.requestAnimationFrame(step);
+  //   }
+  //   window.requestAnimationFrame(step);
+  // }
 
-// function sendEmail() {
-//   Email.send({
-//     Host: "smtp.elasticemail.com",
-//     Username: "maigiabao69@gmail.com",
-//     Password: "07973B992224A862D6EE50A04EAC0FA33EA6",
-//     To: 'maingocgiabao@gmail.com',
-//     From: "sender@example.com",
-//     Subject: "Test email",
-//     Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
-//   }).then(
-//     message => alert(message)
-//   );
-// }
+  // const vh = Math.max(
+  //   document.documentElement.clientHeight || 0,
+  //   window.innerHeight || 0
+  // );
+
+  // window.addEventListener("wheel", (e) => {
+  //   e.preventDefault();
+  //   const delta = e.wheelDelta || -e.deltaY;
+  //   const currentSectionIndex = Math.round(window.pageYOffset / vh);
+  //   const nextSectionIndex = currentSectionIndex + (delta > 0 ? -1 : 1);
+  //   if (sections[nextSectionIndex]) {
+  //     const top = sections[nextSectionIndex].offsetTop;
+  //     smoothScrollBy(top - window.pageYOffset, 1000);
+  //   }
+  // });
+});

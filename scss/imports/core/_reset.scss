@@ -137,3 +137,18 @@ a {
 section {
   padding: 4em 0;
 }
+////////////////////////////////////////////////////////////
+body {
+  font-family: 'Lora', serif;
+  transition: 1s ease-in-out;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+:root{
+  --gap:30px;
+}

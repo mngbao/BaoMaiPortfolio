@@ -1,0 +1,15 @@
+
+
+@font-face {
+  font-family: 'Lora';
+  src: url('./Lora/Lora-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merri';
+  src: url('./Merriweather/Merriweather-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
