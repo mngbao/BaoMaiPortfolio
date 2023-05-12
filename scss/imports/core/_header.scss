@@ -71,7 +71,7 @@ header {
         transform: rotate(90deg);
         transform-origin: left center;
         z-index: 1;
-        transition: 1s ease-in-out;
+        transition: 0.4 ease-in-out;
 
         &::before{
           content: '';
@@ -81,9 +81,14 @@ header {
           background-color: #fbfbfb;
           bottom: 10px;
           left: -110px;
+          transition: 0.4 ease-in-out;
+
         }
-        
       }
+
+        
+    }
+     
       // &::before{
       //   content: '';
       //   width: 78%;
@@ -97,7 +102,15 @@ header {
     }
     
   }
-}
+
+.blackColor{
+          &::before{
+          background-color: black !important;
+           transition: 1s ease-in-out;
+
+          } 
+        }
+
 .hidden{
   opacity: 0;
   transition: all 0.3s ease-in-out ;

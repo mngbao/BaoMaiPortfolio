@@ -146,6 +146,7 @@ section {
 body {
   font-family: "Lora", serif;
   transition: 1s ease-in-out;
+  overflow: hidden;
 }
 
 h1 {
@@ -328,6 +329,16 @@ body .mainwrapper {
 }
 
 /** @format */
+#my-scrollbar {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+#my-scrollbar section {
+  scroll-snap-align: start;
+}
+
 .col-1,
 .col-2,
 .col-3,
@@ -1866,7 +1877,7 @@ header .container-fluid .logo span {
   transform: rotate(90deg);
   transform-origin: left center;
   z-index: 1;
-  transition: 1s ease-in-out;
+  transition: 0.4 ease-in-out;
 }
 header .container-fluid .logo span::before {
   content: "";
@@ -1876,6 +1887,12 @@ header .container-fluid .logo span::before {
   background-color: #fbfbfb;
   bottom: 10px;
   left: -110px;
+  transition: 0.4 ease-in-out;
+}
+
+.blackColor::before {
+  background-color: black !important;
+  transition: 1s ease-in-out;
 }
 
 .hidden {

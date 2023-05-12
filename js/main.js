@@ -105,6 +105,8 @@ jQuery(document).ready(function () {
         bars.forEach((bar) => {
           bar.style.backgroundColor = "white";
         });
+        pagination.classList.remove("blackColor");
+
         break;
       case "contact":
         pagination.innerHTML = "Contact";
@@ -112,7 +114,9 @@ jQuery(document).ready(function () {
         bars.forEach((bar) => {
           bar.style.backgroundColor = "black";
         });
+        pagination.classList.add("blackColor");
         break;
+
       default:
         pagination.innerHTML = "Hello";
         break;
