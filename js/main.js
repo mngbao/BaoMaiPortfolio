@@ -4,14 +4,14 @@ lakehood.addEventListener("mouseover", () => {
   lakehood.style.transition = "transform 8s ease-in-out 0s";
 });
 lakehood.addEventListener("mouseout", () => {
-  lakehood.style.transform = "initial";
-  lakehood.style.transition = "initial";
+  lakehood.style.transform = "translateY(0%)";
+  lakehood.style.transition = "transform 2s ease-in-out 0s";
 });
 
 const styled = document.getElementById("styled");
 styled.addEventListener("mouseover", () => {
-  styled.style.transform = "translateY(-24%)";
-  styled.style.transition = "transform 2s ease-in-out 0s";
+  styled.style.transform = "translateY(-60%)";
+  styled.style.transition = "transform 4s ease-in-out 0s";
 });
 styled.addEventListener("mouseout", () => {
   styled.style.transform = "translateY(0%)";
@@ -25,7 +25,7 @@ wooder.addEventListener("mouseover", () => {
 });
 wooder.addEventListener("mouseout", () => {
   wooder.style.transform = "translateY(0%)";
-  wooder.style.transition = "transform 8s ease-in-out 0s";
+  wooder.style.transition = "transform 3s ease-in-out 0s";
 });
 
 jQuery(document).ready(function () {
